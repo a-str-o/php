@@ -1,0 +1,10 @@
+body {background-color:#505050;}
+  
+.align {
+    display: flex;
+    justify-content:flex-start;
+  }
+.row{
+    display: flex;
+    justify-content: flex-end;
+}
