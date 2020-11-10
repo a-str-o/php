@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>normal day in 1337</title>
         <link rel="stylesheet" href="doft.css">
     </head>
-    <body>
-        <div class="align">
-                <img src="./resources/day_of_the_42.png" >
+        <body>
+            <div class="top">
+                <img id="day42"  src="resources/day_of_the_42.png">
+                <img id="loupe"  src="resources/loupe.png">
+                <a href="http://www.disney.com/">
+                <img id="reload" src="resources/reload.png">
+                </a>
+                <a href="https://www.relaischateaux.com/">
+                <img id="close"  src="resources/close.gif">
+                </a>
+            </div>
+            <br>
             <div class="row">
-                <img height="100"  src="./resources/loupe.png" >
-                <div>
-                    <div>
-                    <img height="20" src="./resources/close.gif"  >
+                <div class="left">
+                    <div class="frameLeft">
+                        <img id="img" src="resources/arrow.png">
                     </div>
-                    <div>
-                    <img height="20"  src="./resources/reload.png" >
+                    <div class="frameLeft">
+                         <img id="img" src="resources/main.png">
+                    </div>
+                    <div class="frameLeft">
+                        <img id="img" src="resources/oeil.png">
+                    </div>
+                    <div class="frameLeft">
+                        <img id="img" src="resources/outil.png">
+                     </div>
+                    <div class="frameLeft">
+                        <img id="img" src="resources/chat-icon.png">
+                    </div>
+                    </div>
+                        <img  class="cluster" src="resources/cluster.jpg" usemap="#clustermap">
+                        <map name="clustermap">
+                            <area shape="poly"
+                            coords="345,345,360,460,410,475,430,480,465,405,405,365"
+                            href="http://www.ikea.com" alt="Buy the chair!" title="Buy the same chair!">
+                            <area shape="poly"
+                            coords="790,315,790,425,850,440,845,465,905,480,910,465,900,460,900,450,975,460,980,330,790,315"
+                            href="http://www.apple.com" alt="Buy that iMac!" title="Buy that iMac">
+                        </map>
+                    <div class="right">
+                    <div class="frameRight1">
+                        <img id="img"  src="resources/book.png">
+                    </div>
+                    <div class="frameRight2">
+                        <img id="img" src="resources/towel.png">
+                    </div>
+                    <div class="frameRight3">
+                        <img id="img" style="width: 250px;height: 150px;"  src="resources/brick.jpg">
+                    </div>
                 </div>
             </div>
-        </div>
-          </div>  
-    </body>
+            <div class="green">
+                    <h3>vous </h3><h1>entrez</h1><h3> alors dans une grande piece remplie </br>d'ordinateurs...</br> -Bonjour, vous etres nouveau ici ?</h3>
+            </br>
+            <input type="text" id="text">
+                <button onClick="window.location.reload();"><h3>reponder</h3reponder></button>
+            </div>
+        </body>
 </html>
