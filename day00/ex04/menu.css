@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(197, 2, 2);
+}
+h1{
+  color : white;
+}
+div{
+  margin-left: 15%
+}
+li {
+  list-style-type: none;
+  float: left;
+  width: 300px;
+  padding: 20px;
+}
+.m1{
+  margin: 0 auto;
+  width: 2000px;
+ 
+}
+.m2{
+  display: none;
+  text-align: left; 
+  margin-left: 20px;
+}
+.menu{
+  background: rgb(254, 222, 2); 
+  border-radius: 10px 10px ;      
+  text-align: center;
+  font-family: 'Comic Sans MS';
+  font-size: 20px;
+  margin: 5px;
+}
+li:hover .m2 {
+  display: block;
+}

@@ -1,6 +1,9 @@
 body {
   background-color: white;
 }
+html {
+  font-size: 2vmin;
+}
 #title {
   text-align: center;
   color: black;
