@@ -8,6 +8,7 @@
     {
             $line = trim(substr($str,0,-1));
             $print = $line;
+            if ($line)
             if ($line[0] == '-' || $line[0] == '+')
                 $line = substr($line,1,strlen($line));
             if (ctype_digit($line))
