@@ -1,0 +1,80 @@
+<!DOCTYPE >
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>calc</title>
+    </header>
+    <body>
+        <input  type="text" id="first">
+        <select name="select-operators"  id="select-operators">
+            <option value="*" selected>*</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="seconde">
+        <input type="submit" onclick="calcule()" id="submit" value="Try me!">
+    </body>
+    <script>
+        setInterval(function () {alert("Please, use me...")}, 30000);
+
+        function strIsEmpty(str) {
+         return (str.length == 0 || !str.trim());
+             }
+
+        function calcule()
+        {
+            var first = document.getElementById("first").value;
+		    var seconde = document.getElementById("seconde").value;
+		    var op = document.getElementById("select-operators").value;
+            
+            if (first >= 0 && seconde >= 0  && !strIsEmpty(first) && !strIsEmpty(seconde))
+                {
+                    if (op == '+')
+  		        	{
+  				        alert(parseInt(first) + parseInt(seconde));
+  			    		console.log(parseInt(first) + parseInt(seconde));
+  		        	}
+  			        if (op == '-')
+  			        {
+  			    		alert(parseInt(first) - parseInt(seconde));
+  			    		console.log(parseInt(first) - parseInt(seconde));
+  			        }
+  		        	if (op == '*')
+  			        {
+  			    		alert(parseInt(first) * parseInt(seconde));
+  			    		console.log(parseInt(first) * parseInt(seconde));
+  		        	}
+    	        	if (op == '/')
+  		        	{
+  			    		if (parseInt(seconde) == 0)
+  			    		{
+  			    			alert("It’s over 9000");
+  				    		console.log("It’s over 9000");
+  		        		}
+  		    			else
+  			    		{
+  			    			alert(parseInt(first) / parseInt(seconde));
+  			    			console.log(parseInt(first) / parseInt(seconde));
+  			    		}
+  		        	}
+  		        	if (op == '%')
+  		        	{
+  			    	    if (parseInt(seconde) == 0)
+  			        	{
+  			        		alert("It’s over 9000");
+  			        		console.log("It’s over 9000");
+  			          	}
+  			        	else
+  			    	    {
+  			    	    	alert(parseInt(first) % parseInt(seconde));
+  			    	    	console.log(parseInt(first) % parseInt(seconde));
+  			        	}
+  		        	}
+                }
+                else 
+  		        	alert("Error :("); 
+        }
+        </script>
+</html>

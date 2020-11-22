@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="first" id="first">
+        <select name="select-operators" id="select-operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" name="seconde" id="seconde">
+        <input type="submit" value="Try me!" id="submit">
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+        const submit = $('#submit');
+        const op = $('#select-operators');
+        const first = $('#first');
+        const seconde = $('#seconde');
+        const display = str => {
+            console.log(str);
+            alert(str);
+        }
+        const useme = () => {
+            alert('Please, use me...');
+            setInterval(useme, 30000);
+        }
+        submit.click(e => {
+            let res = 0;
+            let str = '';
+            const left = Number(first.val());
+            const right = Number(seconde.val());
+            if (left < 0 || right < 0 || !first.val() || !seconde.val() || isNaN(left) || isNaN(right))
+                return (display('Error :('));
+            if ((op.val() === '/' || op.val() === '%') && right === 0)
+                return (display('It’s over 9000!'));
+            switch (op.val()) {
+                case '+':
+                    res = left + right;
+                    break;
+                case '-':
+                    res = left - right;
+                    break;
+                case '*':
+                    res = left * right;
+                    break;
+                case '/':
+                    res = left / right;
+                    break;
+                case '%':
+                    res = left % right;
+                    break;
+            }
+            str = `${first.val()} ${op.val()} ${seconde.val()} = ${res}`;
+            display(str);
+        });
+        setInterval(useme, 30000);
+    </script>
+</body>
+</html>
